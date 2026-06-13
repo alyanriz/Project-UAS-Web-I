@@ -1,42 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>Restaurant Reservation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <ul class="nav justify-content-end">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#hero">Active</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link">Disabled</a>
-                    </li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 fixed-top py-3 backdrop-blur">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-4 text-uppercase fw-bold">
+                    <li class="nav-item"><a class="nav-link text-white" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#reservasi">Reservasi</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#faq">FAQ</a></li>
                 </ul>
             </div>
-        </nav>
-    </header>
-
-    <main>
-        <div class="hero-section" name="hero">
-            <h1>Lorem Ipsum</h1>
-            <p>Lorem ipsum dolor sit amet.</p>
         </div>
-        <button type="button" href="#">RESERVASI SEKARANG</button>
-    </main>
+    </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container text-center text-md-start">
+            <h1 class="display-3 fw-bold mb-4">Eksklusivitas di Setiap Gigitan.</h1>
+            <p class="lead w-md-50 mb-4">Sebuah perjalanan rasa yang menembus batas tradisi. Nikmati kreasi inovatif dari koki pemenang penghargaan kami. Ketersediaan tempat sangat terbatas setiap malamnya.</p>
+            <a href="#reservasi" class="btn btn-outline-light btn-lg px-5 rounded-pill fw-bold">Reservasi Meja</a>
+        </div>
+    </section>
+
+    <section id="menu" class="py-5">
+        <div class="container py-5">
+            <h2 class="text-center fw-bold mb-5">MENU TERBAIK KAMI</h2>
+            <div class="row g-4 text-center">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 glass-effect rounded-4 text-white">
+                        <img src="pics/menu1.png" class="card-img-top rounded-top-4" alt="Beef Wellington">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">The Ultimate Beef Wellington</h5>
+                            <p class="card-text text-light">800.000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 glass-effect rounded-4 text-white">
+                        <img src="pics/menu2.png" class="card-img-top rounded-top-4" alt="Ribeye">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Dry-Aged Bone-In Ribeye</h5>
+                            <p class="card-text text-light">1.500.000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 glass-effect rounded-4 text-white">
+                        <img src="pics/menu3.png" class="card-img-top rounded-top-4" alt="Lobster">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Lobster Thermidor</h5>
+                            <p class="card-text text-light">900.000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 glass-effect rounded-4 text-white">
+                        <img src="pics/menu4.png" class="card-img-top rounded-top-4" alt="Osso Buco">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Osso Buco alla Milanese</h5>
+                            <p class="card-text text-light">450.000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservasi" class="py-5">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-4 text-center">Form Reservasi</h2>
+                    <form id="formReservasi" class="glass-effect p-4 p-md-5 rounded-4 shadow">
+                        
+                        <div class="row g-3 mb-4 text-white">
+                            <div class="col-md-12">
+                                <label>Nama *</label>
+                                <input type="text" id="inputNama" class="form-control bg-transparent text-white" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Alamat Email *</label>
+                                <input type="email" id="inputEmail" class="form-control bg-transparent text-white" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Nomor WhatsApp *</label>
+                                <input type="tel" id="inputWA" class="form-control bg-transparent text-white" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Tanggal *</label>
+                                <input type="date" id="inputTanggal" class="form-control" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Waktu *</label>
+                                <input type="time" id="inputWaktu" class="form-control" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Jumlah Orang *</label>
+                                <input type="number" id="inputOrang" class="form-control bg-transparent text-white" min="1" value="1" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 text-white">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="areaOptions" id="areaIndoor" value="Indoor" checked>
+                                <label class="form-check-label" for="areaIndoor">Indoor</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="areaOptions" id="areaOutdoor" value="Outdoor">
+                                <label class="form-check-label" for="areaOutdoor">Outdoor</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="areaOptions" id="areaVIP" value="VIP Room">
+                                <label class="form-check-label" for="areaVIP">VIP Room</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 text-white">
+                            <h5 class="fw-bold mb-3">Pesanan</h5>
+                            <div class="row gy-3 align-items-center">
+                                <div class="col-8">The Ultimate Beef Wellington</div>
+                                <div class="col-4"><input type="number" class="form-control bg-transparent text-white" value="0" min="0"></div>
+                                
+                                <div class="col-8">Dry-Aged Bone-In Ribeye</div>
+                                <div class="col-4"><input type="number" class="form-control bg-transparent text-white" value="0" min="0"></div>
+                                
+                                <div class="col-8">Lobster Thermidor</div>
+                                <div class="col-4"><input type="number" class="form-control bg-transparent text-white" value="0" min="0"></div>
+                                
+                                <div class="col-8">Osso Buco alla Milanese</div>
+                                <div class="col-4"><input type="number" class="form-control bg-transparent text-white" value="0" min="0"></div>
+                            </div>
+                        </div>
+
+                        <button type="button" id="btnSubmit" class="btn btn-light w-100 py-3 fw-bold rounded-pill text-dark">Reservasi Sekarang</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-5">
+        <div class="container py-5">
+            <h2 class="text-center fw-bold mb-5">FAQ</h2>
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <div class="accordion accordion-flush glass-effect rounded" id="accordionFAQ">
+                        
+                        <div class="accordion-item border-bottom border-secondary bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed shadow-none fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Apakah saya bisa membatalkan atau mengubah jadwal reservasi yang sudah dibuat?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-white">Karena sistem kami memproses reservasi secara otomatis, setiap perubahan jadwal (hari atau jam) maupun pembatalan tidak dapat dilakukan melalui website. Silakan hubungi admin kami.</div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-bottom border-secondary bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed shadow-none fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Bagaimana jika saya datang terlambat dari jam reservasi?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-white">Kami memberikan toleransi waktu keterlambatan maksimal 15 menit dari jadwal reservasi yang telah Anda tentukan.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row border-top border-secondary pt-4 text-center text-md-start mt-5">
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold">Alamat:</h5>
+                    <p>Jl. Jenderal Sudirman No. 10, RT 01/RW 02</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold">Jam Buka:</h5>
+                    <p>Senin-Jumat 09.00-21.00<br>Sabtu-Minggu 10.00-22.00</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold">Kontak:</h5>
+                    <p>Telp/WA: 000000000<br>Email: wefala9736@dyleris.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
