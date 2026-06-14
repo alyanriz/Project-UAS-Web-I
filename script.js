@@ -12,7 +12,7 @@ $(document).ready(function() {
         let area = $('input[name="areaOptions"]:checked').val();
 
         if (nama === "" || email === "" || wa === "" || tanggal === "" || waktu === "") {
-            alert("GAGAL: Mohon lengkapi semua data wajib (Nama, Email, WA, Tanggal, dan Waktu) sebelum melanjutkan reservasi.");
+            alert("Mohon lengkapi semua data wajib (Nama, Email, WA, Tanggal, dan Waktu) sebelum melanjutkan reservasi.");
         } else {
             let pesanSukses = 
                 "RESERVASI BERHASIL!\n\n" +
